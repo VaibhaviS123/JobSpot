@@ -67,6 +67,7 @@ html,body{
   button:hover{
     opacity: 0.9;
     transform: scale(1.05) ;
+    background:linear-gradient(135deg, #d876bc 0%, #93afdf 100%);
    }
   .intro-text{
     font-size: 2rem;
@@ -87,7 +88,7 @@ html,body{
     font-weight: 500;
   }
   .feature-card{
-   height: 22vh;
+   height: 30vh;
    width: 24vw;
    border: none;
    border-radius: 10px;
@@ -97,6 +98,7 @@ html,body{
   .feature-card:hover{
      opacity: 0.9;
     transform: scale(1.05) ;
+    background:linear-gradient(135deg, #d876bc 0%, #93afdf 100%);
   }
  .FullPage {
   min-height: 100vh;
@@ -203,14 +205,14 @@ html,body{
 }
 
 .job-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* At least 280px wide */
+  gap: 2em;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  align-items: center;
-  width: auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .job-card {
@@ -224,18 +226,14 @@ html,body{
   color: #222;
   font-size: 1.15rem;
   position: relative;
-  overflow: auto;
-  width: 100%;
-  min-width: 260px;
-  max-width: 400px;
-  height: 220px;
-  min-height: 180px;
-  max-height: 260px;
+  overflow: hidden;
+  height: 260px; /* 🔥 Consistent height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: box-shadow 0.3s, transform 0.3s, border 0.3s, background 0.3s;
 }
+
 .job-card:hover {
   border: 2.5px solid #667eea;
   box-shadow: 0 12px 36px 0 #a6c1ee88, 0 0 24px 4px #fff6;
@@ -278,14 +276,18 @@ background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
 }
 .Apply{
   border-radius:12px;
-  color: #222;
-  background-color:white ;
+  color: white;
+  background-color:purple;
   width: 12vw;
+  height: 7vh;
 }
 .View{
   border-radius:12px;
-  color: #222;
-  background-color:white ;
+  color: white;
+  background-color:purple ;
+  width: 12vw;
+  margin-top: 12px;
+  height: 5vh;
 }
 .Profile{
   width: 50vw;
@@ -351,4 +353,62 @@ background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
 }
 * {
   box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .feature-card {
+    width: 90vw;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .Mid-box {
+    max-width: 90vw;
+    padding: 2em 1em;
+  }
+
+  .job-lists-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .job-card {
+    max-width: 90vw;
+    height: auto;
+    padding: 1.5em;
+  }
+
+  .Apply,
+  .View,
+  .buttons {
+    width: 80%;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .Profile {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .rows {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.info{
+  font-size: 3 rem;
+  margin-top: 5px;
+}
+@media (max-width: 600px) {
+  .job-card {
+    padding: 1.5em;
+    font-size: 1rem;
+    height: auto; /* allow card height to grow with content */
+  }
 }

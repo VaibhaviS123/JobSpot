@@ -31,12 +31,14 @@ export default function Application() {
     <div className='login-bg'>
       <div className='FullPage'>
         <div className='Mid-box'>
-          <h3>Confirm Application</h3>
+          <div className='info'>
+          <h3>APPLICATION</h3>
           <p><strong>Name:</strong> {profileData.fullName}</p>
           <p><strong>Email:</strong> {profileData.email}</p>
           <p><strong>Skills:</strong> {profileData.skills?.join(", ")}</p>
           <p><strong>Resume:</strong> {profileData.resume ? "Uploaded" : "Not uploaded"}</p>
-          <button onClick={handleConfirmApply}>Submit Application</button>
+         </div>
+          <button onClick={handleConfirmApply} style={{color:"white", backgroundColor:"purple",height:"3rem",borderRadius:"12px",marginTop:"12px"}}>Submit Application</button>
         </div>
       </div>
     </div>

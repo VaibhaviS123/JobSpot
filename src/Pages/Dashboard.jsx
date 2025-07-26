@@ -41,7 +41,7 @@ const JobDashboard = () => {
       >
         <div style={{ flex: 1 }}></div>
         <h2 style={{ margin: 0, fontSize: '43px', textAlign: 'center', flex: '0 1 auto' }}>
-          🧑‍💻 Job Tracker
+          🧑‍💻 JobSpot
         </h2>
         <Link to="/profile" style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
           <button
