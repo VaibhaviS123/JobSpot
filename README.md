@@ -69,7 +69,9 @@ JobSpot/
 ### 👩‍💻 Author
 
 Vaibhavi Shinde
+</br>
 📫 LinkedIn: https://www.linkedin.com/in/vaibhavi-shinde-0279a628a
+</br>
 📧 Email: vaibhavis082@gmail.com
 
 ---
@@ -81,4 +83,5 @@ git clone https://github.com/vaibhavis123/JobSpot.git
 cd JobSpot
 npm install
 npm start
+
 ---
